@@ -1,0 +1,17 @@
+@p maximum_input_line_length = infinity
+
+@O@<basic.con@>==@{
+    program
+      : statement+
+      .
+
+    statement
+      : identifier '=' integer ';'
+      / ';'
+      .
+@}
+
+@O@<basic.gla@>@{
+    identifier: $[a-zA-Z]
+    integer: $[0-9]+
+@}
